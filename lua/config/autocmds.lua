@@ -6,11 +6,13 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- vim.cmd('highlight Comment guifg=#98971a')
+-- vim.cmd('highlight Variable guifg=#ECBE7B')
+
 vim.cmd("highlight LineNr guifg=#ffffff guibg=none")
 vim.cmd("highlight CursorLineNr guifg=#daff24 guibg=#9d0006")
 vim.cmd("highlight CursorLine term=bold cterm=bold guibg=#1b047c")
-vim.cmd("highlight ColorColumn ctermbg=lightgrey guibg=#9d0006")
-vim.cmd("highlight ColorColumn ctermbg=red guibg=#af3a03")
--- vim.cmd('highlight Comment guifg=#98971a')
--- vim.cmd('highlight Variable guifg=#ECBE7B')
+-- vim.cmd("highlight ColorColumn ctermbg=lightgrey guibg=#9d0006")
+-- vim.cmd("highlight ColorColumn ctermbg=red guibg=#af3a03")
 vim.cmd("highlight Visual guifg=black guibg=#d79921")
