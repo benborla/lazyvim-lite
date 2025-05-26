@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local keymap = vim.keymap
+-- local builtin = require("telescope.builtin")
 
 -- Increment/decrement
 -- Increment/decrement a number
@@ -67,7 +68,19 @@ keymap.set("n", "<Space>h", "<cmd>nohl<cr>", { noremap = true, silent = true, de
 keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
 keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
 
-keymap.set("n", "\\\\", "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true, silent = true })
+-- keymap.set("n", "\\\\", builtin.buffers({ sort_mru = true, ignore_current_buffer = true }))
 
 -- show floating diagnostic
 keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", { noremap = true, silent = true })
+
+keymap.set("n", ";f", function()
+  Snacks.explorer()
+end, { desc = "File Explorer" })
+
+keymap.set("n", "\\\\", function()
+  Snacks.picker.buffers()
+end, { desc = "File Explorer" })
+
+keymap.set("n", "<D-p>", function()
+  Snacks.picker.files()
+end, { desc = "File Explorer" })
