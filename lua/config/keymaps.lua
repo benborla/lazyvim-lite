@@ -82,5 +82,7 @@ keymap.set("n", "\\\\", function()
 end, { desc = "File Explorer" })
 
 keymap.set("n", "<D-p>", function()
-  Snacks.picker.files()
+  Snacks.picker.files({
+    hidden = true,
+  })
 end, { desc = "File Explorer" })
